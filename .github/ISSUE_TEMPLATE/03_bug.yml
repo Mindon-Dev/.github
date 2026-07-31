@@ -1,0 +1,71 @@
+name: "🐞 Bug"
+description: "동작이 잘못됐다 — 오류, 잘못된 결과, 회귀"
+title: "[Bug] "
+labels:
+  - "type::bug"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **제목**: `[Bug] ` 뒤에 무엇이 잘못됐는지 한 줄로 적으세요. 목록에서 이것만 보입니다.
+        우선순위·담당자는 **보드(Project)**, 도메인은 **`domain::*` 라벨**로 지정합니다. 본문에는 적지 않습니다.
+
+  - type: dropdown
+    id: env
+    attributes:
+      label: "🖥️ 환경"
+      options:
+        - 운영
+        - 테스트
+        - 로컬
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "🚨 문제 상황"
+      description: 무엇이 잘못 동작하나요?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: "🔁 재현 절차"
+      description: 순서대로 적어주세요.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_actual
+    attributes:
+      label: "⚖️ 기대 동작 / 실제 동작"
+      description: 정상이라면 어떻게 동작해야 하나요?
+      value: |
+        기대:
+        실제:
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "📎 근거"
+      description: 로그, 화면 캡처, 요청/응답 등
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "✅ 완료 조건"
+      description: 이 체크박스가 전부 채워지면 이슈를 닫습니다.
+      value: |
+        - [ ] 원인이 확인되었다
+        - [ ] 재현 케이스가 해결되었다
+        - [ ] 회귀 가능성이 검토되었다
+    validations:
+      required: true
