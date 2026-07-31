@@ -1,0 +1,51 @@
+name: "♻️ Improvement"
+description: "있는 것을 더 낫게 만든다 — UI 정합, 성능, 구조 개선"
+title: "[Improvement] "
+labels:
+  - "type::improvement"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **제목**: `[Improvement] ` 뒤에 무엇을 개선할지 한 줄로 적으세요. 목록에서 이것만 보입니다.
+        우선순위·담당자는 **보드(Project)**, 도메인은 **`domain::*` 라벨**로 지정합니다. 본문에는 적지 않습니다.
+
+  - type: textarea
+    id: current
+    attributes:
+      label: "🔍 현재 동작"
+      description: 지금 어떻게 동작하는가. 동작은 하지만 무엇이 아쉬운가?
+      placeholder: "예) 화면마다 문구와 순서가 달라 담당자가 혼동한다"
+    validations:
+      required: true
+
+  - type: textarea
+    id: after
+    attributes:
+      label: "🧾 개선 후"
+      description: >-
+        무엇이 되면 되는지를 적습니다. 어떻게 할지(레퍼런스 조사, 검토 방법)는 작업하면서
+        정하니 여기 적지 않아도 됩니다.
+      placeholder: "예) 공통 컴포넌트를 재사용해 다른 화면들과 같은 인상을 준다"
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "✅ 완료 조건"
+      description: >-
+        체크하는 순간 이견이 없을 만큼 구체적으로. "개선되었는가?" 같은 질문이 아니라
+        확인 가능한 사실로 적습니다.
+        예) 모든 뷰가 공통 디자인 토큰을 따른다 / 1440px 에서 레이아웃이 깨지지 않는다
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: refs
+    attributes:
+      label: "🔗 참고"
+      description: 설계 문서 위치, 관련 화면, 관련 이슈 번호 등
