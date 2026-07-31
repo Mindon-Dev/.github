@@ -1,0 +1,50 @@
+name: "✨ Feature"
+description: "없던 것을 새로 만든다 — 새 화면, 새 기능, 이관"
+title: "[Feature] "
+labels:
+  - "type::feat"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **제목**: `[Feature] ` 뒤에 무엇을 만들지 한 줄로 적으세요. 목록에서 이것만 보입니다.
+        우선순위·담당자는 **보드(Project)**, 도메인은 **`domain::*` 라벨**로 지정합니다. 본문에는 적지 않습니다.
+
+  - type: textarea
+    id: background
+    attributes:
+      label: "🎯 배경 / 문제"
+      description: 지금 무엇이 불편한가? 누가 겪는 문제인가?
+      placeholder: "예) 담당자가 이 작업을 하려면 구 시스템을 병행해서 써야 한다"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "🧾 원하는 동작"
+      description: >-
+        무엇이 되면 되는지를 적습니다. 어떻게 만들지(조사·설계 방법)는 작업하면서 정하니
+        여기 적지 않아도 됩니다. 화면이 있으면 캡처나 스케치를 붙여주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "✅ 완료 조건"
+      description: >-
+        체크하는 순간 이견이 없을 만큼 구체적으로. "잘 되었는가?" 같은 질문이 아니라
+        확인 가능한 사실로 적습니다.
+        예) 목록이 조회된다 / 저장한 값이 재조회 시 유지된다 / 기존 화면과 필드가 1:1 대응한다
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: refs
+    attributes:
+      label: "🔗 참고"
+      description: 설계 문서 위치, 관련 화면, 관련 이슈 번호 등
